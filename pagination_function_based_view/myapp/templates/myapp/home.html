@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Home</h1>
+    {% for post in posts %}
+    
+    <div class="container">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.desc }}</p>
+        <small>{{ post.publish_date }}</small>
+    </div>
+
+    {% endfor %}
+
+    <div>
+        <span>
+            {% if posts.has_previous %}
+
+            <a href="?page={{ posts.previous_page_number }}">Previous</a>
+
+            {% endif %}
+
+            <span>{{ posts.number }}</span>
+
+            {% if posts.has_next %}
+
+            <a href="?page={{ posts.next_page_number }}">Next</a>
+
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>

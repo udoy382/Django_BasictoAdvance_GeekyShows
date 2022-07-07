@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Templates Language</title>
+    <style>
+        .heading{
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">TEMPLATES LANGUAGE</h1>
+    <!-- <h3>Hello {{nm}}</h3> -->
+    <!-- <h3>Name: {{nm}} Duration: {{du}} Total Seats: {{st}}</h3> -->
+
+    <!-- <h2>{{nm | capfirst}}</h2> -->
+    <!-- <h2>{{nm | default:'Nothing'}}</h2> -->
+    <!-- <h2>{{nm | length}}</h2> -->
+    <!-- <h2>{{nm | lower}}</h2> -->
+    <!-- <h2>{{nm | upper}}</h2> -->
+    <!-- <h2>{{nm | slice:'5'}}</h2> -->
+    <!-- <h2>{{nm | truncatechars:4}}</h2> -->
+    <!-- <h2>{{nm | truncatewords:4}}</h2> -->
+
+    <!-- <h3>{{dt | date:'D d M Y'}}</h3> -->
+    <!-- <h3>{{dt | date:'SHORT_DATE_FORMAT'}}</h3> -->
+    <!-- <h3>{{dt | time:'H:i'}}</h3> -->
+    <!-- <h3>{{dt | time:'TIME_FORMAT'}}</h3> -->
+
+    <!-- -------------------- -->
+
+    {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %}
+
+    {% if n and st %}
+    <h4>{{n}} and {{st}}</h4>
+    {% endif %}
+
+    {% if n or st %}
+    <h4>{{n}} or {{st}}</h4>
+    {% endif %}
+
+    {% if not st %}
+    <h4>not available</h4>
+    {% else %}
+    <h4>available</h4>
+    {% endif %}
+
+
+    {% if n == st %}
+    <h4> {{n}} is == {{st}}</h4>
+    {% else %}
+    <h5>{{n}} is not == {{st}}</h5>
+    {% endif %}
+
+
+<!-- ----------------------------- -->
+
+    {% for name in names %}
+    <!-- {{ forloop.counter}} -->
+    <!-- {{ forloop.first}} -->
+    <!-- {{ forloop.last}} -->
+    {{ forloop.revcounter0}}
+    <h3>{{name}}</h3> 
+    {% empty %}
+    <h3>No names available</h3>
+    {% endfor %}
+
+<!-- --------------------------- -->
+
+    <!-- {{student}} <br> -->
+    <!-- {{student.student1.name}} -->
+    <!-- {{student.student3.rool}} -->
+
+    {% for key, value in student.items %}
+        {{key}} = {{value}} <br>
+    {% endfor %}
+
+
+<!-- ---------------------- -->
+
+    {{data}} <br>
+
+    {% for key, value in data.items %}
+        {{key}} = {{value}}
+    {% endfor %}
+
+<!-- --------------------------- -->
+</body>
+</html>

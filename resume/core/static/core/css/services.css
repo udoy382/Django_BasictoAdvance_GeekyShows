@@ -1,0 +1,10 @@
+.services-container-site{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.services-container-site h1{
+    color: #000;
+}

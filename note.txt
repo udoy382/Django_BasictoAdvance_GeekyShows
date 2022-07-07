@@ -1,0 +1,146 @@
+INSTALL VIRTUAL ENVIRONMENT WRAPPER
+
+- pip install virtualenvwrapper-win
+
+CREATE VIRTUAL ENVIRONMENT (VE)
+
+- virtualenv env
+
+- mkvirtualenv env
+
+ACTIVE VIRTUAL ENVIRONMENT
+
+- ./env/Script/Active
+
+NOTE: First create & active virtual environment then install anything and write code.
+
+
+CREATE DJANGO PROJECT
+
+- django-admin startproject
+
+CREATE DJANGO PROJECT APP
+
+- python manage.py startapp
+
+
+NOTE: After creating a django app must go project directory then create django app.
+
+
+UNINSTALL DJANGO
+
+- pip uninstall django
+
+
+REMOVE VIRTUAL ENVIRONMENT
+
+- rmvirtualenv env
+
+
+UNINSTALL VIRTUALENVWRAPPER-WIN
+
+- pip uninstall virtualenvwrapper-win
+
+-------------------__------------------
+
+IF I AM USING JINGA2 IN DJANGO BACKEND SO WE MUST ADD JINGA2 IN SETTING.PY AND MUST INSTALL JINGA2 WITH PIP.
+
+- pip install Jinja2
+
+LIKE...
+
+TEMPLATES = [
+#    ------------new add for jinga2-----------------
+    {
+        'BACKEND': 'django.template.backend.jinja2.jinga2',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+
+---------------------__---------------------
+
+
+DJANGO TEMPLATE FILTER EXAMPLE.
+
+WHEN WE NEED TO MODIFY VARIABLE BEFORE DISPLAYING WE CAN USE FILTERS. [ Pipe `|` ] IS USED TO APPLY FILTER.
+
+Syntex:- {{variable|filter}}
+Example:- {{name | upper}}
+Example:- {{name | lower}}
+
+SOME OF FILTER TAKE ARGUMENTS.
+
+Syntex:- {{variable | filter:argument}}
+Example:- {{article | truncateword:40}}
+
+FILTER CAN BE CHAINED.
+
+Syntex:- {{variable | filter | filter}}
+Example:- {{article | upper}}
+Example:- {{article | upper | truncateword:40}}
+
+---------------------__---------------------
+
+SEARCH IN GOOGLE FOR MORE INFO ABOUT FILTER.
+
+- built in filter django template language
+
+SEARCH IN GOOGLE FOR MORE INFO ABOUT DATE / TIME / YEAR FORMAT TYPE.
+
+- date time and year format types
+
+----------------------__----------------------
+
+HOW TO SEE ALL MIGRATIONS WITH COMMAND LINE.
+
+- pyhton manage.py showmigrations
+
+FOR MIGRATIONS OUR MODEL USED THIS COMMAND.
+
+- python manage.py makemigrations
+
+THEN MIGRATE OUR MODEL.
+
+- pyhton manage.py migrate
+
+FOR SEE OUR MIGRATIONS FILES.
+
+- python manage.py sqlmigrate enroll 0001
+
+
+
+---------------------SOMETHING NEW---------------------
+
+* ModelAdmin (models)
+
+ADD THIS FOR SHOW ADMIN PANEL DATA IN DIFFERENT WAY [ admin.py ]
+----------------------------------------------
+from django.contrib import admin
+from .models import Student
+
+# Register your models here.
+
+class StudentAdmin(admin.ModelAdmin):
+    list_display=('student_id', 'student_name', 'student_email', 'student_password')
+
+
+admin.site.register(Student, StudentAdmin)
+-----------------------------------------------
+
+
+IMPORTANT PROJECT IS {{ myProject3 }} IT IS VERY IMPORT... FORM / URL PATH ALL IN THIS PROJECT 

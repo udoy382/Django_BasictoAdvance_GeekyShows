@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Home : See all Data</h2>
+    {% comment %} <h6>{{ ch }}</h6>
+    <a href="{% url 'showDetails' 1 %}">Student 1</a>
+    <a href="{% url 'showDetails' 2 %}">Student 2</a>
+    <a href="{% url 'showDetails' 3 %}">Student 3</a>
+
+    <a href="{% url 'subDetails' 1 4 %}">Sub Student 4</a>
+    <a href="{% url 'subDetails' 2 5 %}">Sub Student 5</a>
+    <a href="{% url 'subDetails' 3 6 %}">Sub Student 6</a> {% endcomment %}
+</body>
+</html>

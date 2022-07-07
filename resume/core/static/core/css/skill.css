@@ -1,0 +1,16 @@
+h1{
+    color: #000;
+}
+
+
+.hed{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+
+.hed h1{
+    color: #000;
+}

@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.left-nav{
+    display: flex;
+    padding: 10px 15px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background-color: #000;
+    height: 5rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.left-nav1 img{
+    width: 50px;
+}
+
+.left-nav2 .follow-span{
+    background-color: rgb(96, 224, 96);
+    color: #000;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.left-nav2 .follow-span:hover{
+    background-color: rgb(99, 240, 99);
+    color:#be3144;
+}
+
+.left-nav2 h2{
+    font-size: 18px;
+}
+
+/* Right Nav CSS */
+
+.right-nav p{
+    background-color: rgb(46, 44, 44);
+    padding: 10px;
+    color: white;
+    display: inline-block;
+}
+
+.right-nav p img{
+    width: 30px;
+    margin-top: 5px;
+}
+
+.right-nav a{
+    background-color: rgb(46, 44, 44);
+    padding: 18px;
+    color: white;
+    display: inline-block;
+}
+
+.right-nav a:hover{
+    background-color: rgb(77, 72, 72);
+}
+
+.right-nav a{
+    border-radius: 5px;
+}
+
+.right-nav{
+    padding: 10px 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-nav .sign-up{
+    background-color: rgb(96, 224, 96);
+    color: #000;
+}
+
+.right-nav .sign-up:hover{
+    background-color: rgb(109, 202, 109);
+    color: #000;
+}
+
+.main-navbar{
+    background-color: #be3144;;
+    height: 4em;
+    position: sticky;
+    top: 5rem;
+}
+
+.main-nav-links ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav-links ul li{
+    margin: 1.1rem 3rem 0 0;
+    font-size: 23px;
+    list-style: none;
+}
+
+.main-nav-links ul li a{
+    text-decoration: none;
+}
+
+.main-nav-links ul li a:hover{
+    color: rgb(187, 181, 181);
+}
+
+
+.main-profile{
+    height: 100vh;
+    width: auto;
+    background-color: #303841;;
+}
+
+.profile-content{
+    text-align: center;
+    padding-top: 15rem;
+}
+
+.profile-content h1{
+    font-size: 4rem;
+}
+
+.profile-content p{
+    color: rgb(158, 47, 47);
+    font-size: 2rem;
+}
+
+/* My Projects Section */
+
+.my-projects{
+    height: 100vh;
+    background-color: #45567d;;
+}
+
+.my-projects-content h1{
+    font-size: 2rem;
+    max-width: 450px;
+    margin: 0 auto 6rem auto;
+    padding-top: 3rem;
+    border-bottom: 0.1rem solid rgb(214, 207, 207);
+}
+
+.my-projects1{
+    height: 25rem;
+    width: 20rem;
+    /* background-color: red; */
+}
+
+.my-projects1 img{
+    width: 20rem;
+    height: 22rem;
+}
+
+.project-text{
+    background-color: #303841;
+    color: #fff;
+    padding: 10px;
+}
+
+.all-my-projects-here{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* bottom-section */
+
+.bottom-section{
+    background-color: #303841;
+    height: 70vh;
+    border-bottom: 5px solid #be3144;
+}
+
+.bottom-texts{
+    text-align: center;
+    padding-top: 10rem;
+}
+
+.bottom-links{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.bottom-texts h1{
+    font-size: 4rem;
+    padding: 10px;
+}
+
+.bottom-texts small{
+    font-size: 1.4rem;
+}
+
+.b-link{
+    font-size: 23px;
+    padding: 25px;
+}
+
+.bottom-section::after{
+    content: '';
+    border-bottom: 5px solid #be3144;
+    width: 100%;
+}
+
+/* footer */
+
+.footer{
+    background-color: #303841;
+    height: 10vh;
+}
+
+.footer p{
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Extra Core */

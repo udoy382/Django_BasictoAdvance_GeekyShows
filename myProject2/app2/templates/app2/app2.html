@@ -1,0 +1,19 @@
+{% extends 'app2/base.html' %}
+{% block title %}Home Page | app2{% endblock title %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <h1>Hello! This is Home Page</h1>
+    {% include 'app2/course.html' with f='Flask' %}
+    {% include 'app2/course.html' with s='Sql' %}
+    {% include 'app2/course.html' with i='Sql Injection' %}
+    {% endblock content %}
+</body>
+</html>

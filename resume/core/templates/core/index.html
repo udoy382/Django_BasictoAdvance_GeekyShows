@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+    {% block content %}
+    <main>
+        <section class="main-profile">
+            <div class="profile-content">
+                <h1>Hey! I am Udoy</h1>
+                <p>a web developer</p>
+            </div>
+        </section>
+        
+        <section class="my-projects">
+            <div class="my-projects-content">
+                <h1>These are some of my projects</h1>
+            </div>
+            <div class="all-my-projects-here">
+                <div class="my-projects1">
+                    <a href="https://github.com/udoy382" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb_aPJLtW0yrYKr2v87KEo8Nu-XSz_NKRKAA&usqp=CAU" alt="..."></a>
+                    <div class="project-text">
+                        <a href="https://github.com/udoy382" target="_blank">My Github Progile</a>
+                    </div>
+                </div>
+                <div class="my-projects1">
+                    <a href="../../AnimatedPage/html/index.html" target="_blank"><img src="https://i.ytimg.com/vi/CZTCciHE72I/maxresdefault.jpg" alt=""></a>
+                    <div class="project-text">
+                        <a href="../../AnimatedPage/html/index.html" target="_blank">Animated Web Page</a>
+                    </div>
+                </div>
+                <div class="my-projects1">
+                    <a href="../../SocialPage/html/index.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaYIIzAqta0GPUwSqLRqEkv6Vdw4bonoEUsQ&usqp=CAU" alt="..."></a>
+                    <div class="project-text">
+                        <a href="../../SocialPage/html/index.html" target="_blank">Social Web Page Like Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-section">
+            <div class="bottom-texts">
+                <h1>Let's work together...</h1>
+                <small><i>How do you take your coffee?</i></small>
+            </div>
+            <div class="bottom-links">
+               <a href="#" class="b-link">Facebook</a>
+               <a href="#" class="b-link">Github</a>
+               <a href="#" class="b-link">Twitter</a>
+               <a href="#" class="b-link">Send a mail</a>
+               <a href="#" class="b-link">Call me</a>
+            </div>
+        </section>
+    </main>
+    {% endblock content %}

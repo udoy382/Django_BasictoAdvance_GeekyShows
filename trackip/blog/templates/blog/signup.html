@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %} Create New Accout {% endblock title %}
+
+{% block content %}
+
+<div class="col-sm-10 my-5">
+    <h3 class="mb-3">Signup here...</h3>
+    {% if messages %}
+    
+    {% for message in messages %}
+    
+    <p {% if message.tags %} class="alert alert-{{ message.tags }} mb-5"{% endif %} >{{ message }}</p>
+
+    {% endfor %}
+
+    {% endif %}
+    <form action="{% url 'signup' %}" method="post" novalidate>
+        {% csrf_token %}
+        {% for data in form %}
+
+        <div class="form-group">
+            {{ data.label_tag}} {{ data }} <small class="text-warning">{{ data.errors | striptags}}</small> <br>
+        </div>
+
+        {% endfor %}
+        <input type="submit" value="SignUp" class="btn btn-primary">
+        {% if form.non_field_errors %}
+        
+        {% for error in form.non_field_errors %}
+        
+        <p class="alert alert-danger my-3">{{ error }}</p>
+
+        {% endfor %}
+
+        {% endif %}
+    </form>
+</div>
+
+{% endblock content %}

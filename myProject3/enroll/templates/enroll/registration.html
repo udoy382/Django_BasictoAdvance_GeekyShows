@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<style>
+    .helptext{
+        color: rgb(17, 172, 192);
+    }
+</style>
+<body>
+    <form action="#">
+        {{ form.as_p }}
+        {% comment %} {{ form.as_table }} {% endcomment %}
+        {% comment %} {{ form.as_p }} {% endcomment %}
+        {% comment %} {{ form.as_ul }} {% endcomment %}
+        {% comment %} {{ form.name }} {% endcomment %}
+        {% comment %} {{ form.email }} {% endcomment %}
+        <button type="submit">Submit</button>
+
+        <div>
+            <label for="{{ form.name.id_for_label}}">Udoy</label>
+            {{ form.name }}
+            {% comment %} <input type="text" name="name" id="id_name"> {% endcomment %}
+
+            {{ form.email.label_tag }}
+            {{ form.email }} <br> <hr>
+
+            {% comment %} show initial value  {% endcomment %}
+            {{ form.name.value }} <br>
+
+            {{ form.name.help_text }} <br>
+
+            {{ form.name.field.required }} <br>
+
+            {% for field in form %}
+            
+            {{field.label}}
+
+            {% endfor %}
+            
+        </div>
+    </form>
+</body>
+</html>
